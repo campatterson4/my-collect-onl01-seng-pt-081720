@@ -1,24 +1,14 @@
-list = ["The Office", "Breaking Bad", "Game of Thrones"]
+list = ["The Office", "Game of Thrones", "Breaking Bad"]
 
-def my_each(array)
+
+def my_collect(array)
   i = 0
+  name_collection = []
   while i < array.length
-    yield(array[i])
-    i = i + 1
-  end
-end
-
-my_each(list) {|i| puts "My favorite show is #{i}."}
-
-
-def hello(array)
-  i = 0
-  collection = []
-  while i < array.length
-    collection << yield(array[i])
+    name_collection.push yield(array[i])
     i += 1
   end
-  collection
+  name_collection
 end
 
-hello(list) {|i| "Wanna watch #{i} tonight?"}
+my_collect(list) {|i| i.split(" ").first}
