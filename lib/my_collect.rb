@@ -8,7 +8,7 @@ def my_each(array)
   end
 end
 
-my_each(list) {|i| puts "So I think #{i} is a piece of shit"}
+my_each(list) {|i| puts "My favorite show is #{i}."}
 
 
 def hello(array)
@@ -21,4 +21,4 @@ def hello(array)
   collection
 end
 
-hello(list) {|i| "Hello #{i} what's up?"}
+hello(list) {|i| "Wanna watch #{i} tonight?"}
